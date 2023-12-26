@@ -4553,7 +4553,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetPos,
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Sprite.Exps.Y,
-		C3.Plugins.System.Exps.fps,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Behaviors.Platform.Cnds.IsJumping,
 		C3.Plugins.Mouse.Cnds.OnClick,
@@ -4564,7 +4563,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Platform.Cnds.IsMoving,
 		C3.Plugins.System.Cnds.Every,
 		C3.Behaviors.MoveTo.Acts.SetDeceleration,
-		C3.Behaviors.MoveTo.Acts.MoveToPosition
+		C3.Behaviors.MoveTo.Acts.MoveToPosition,
+		C3.Plugins.Button.Cnds.OnClicked,
+		C3.Plugins.Browser.Acts.GoToURL
 	];
 };
 self.C3_JsPropNameTable = [
@@ -4816,10 +4817,6 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
 		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0();
-		},
 		() => "прыжок",
 		() => 500,
 		() => 50,
@@ -4827,7 +4824,8 @@ self.C3_ExpressionFuncs = [
 		() => 9999,
 		() => "стоит",
 		() => 1918,
-		() => 766
+		() => 766,
+		() => "https://ilyageme.github.io/ilyaGemeMeine/"
 ];
 
 
